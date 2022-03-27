@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/13c11ad553.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>To-Do List</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="container-top">
+        <div>
+          <h1 id="list-title">To-Do</h1>
+          <form>
+            <input
+              type="text"
+              id="task-input"
+              name="item"
+              placeholder="Add a task..."
+              autocomplete="off"
+            />
+            <div id="list-actions">
+              <input type="button" id="submit-task" value="Add Task" />
+              <input
+                type="button"
+                class="reset-list"
+                id="reset"
+                value="Reset List"
+              />
+            </div>
+          </form>
+        </div>
+      </header>
+      <hr />
+      <main>
+        <div class="container-bottom">
+          <div id="task-list">
+            <!-- 
+              <div class="task-list-item">
+              <div class="item-content">
+                <div class="item-text">Sample Task</div>
+                <div class="action-buttons">
+                  <input type="button" id="edit" value="Edit" />
+                  <input type="button" id="delete" value="Delete" />
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>

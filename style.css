@@ -1,0 +1,112 @@
+* {
+  background-color: cadetblue;
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  cursor: default;
+}
+
+body {
+  max-width: 1000px;
+  margin: 0px auto;
+}
+
+hr {
+  border: 1px ridge darkcyan;
+  display: block;
+  width: 80vw;
+  max-width: 1000px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: cadetblue;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(46, 104, 133, 0.5);
+}
+
+#list-title {
+  font-size: 32px;
+  font-weight: 700;
+  font-style: italic;
+}
+
+#task-input {
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 60vw;
+  max-width: 500px;
+  margin: 10px 10px;
+  padding: 5px;
+  border: none;
+  border-radius: 16px;
+  cursor: text;
+}
+
+.container {
+  height: 75vh;
+}
+
+.container-bottom {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  height: 60%;
+  max-height: 75vh;
+}
+
+.task-list-item {
+  width: 90%;
+  height: auto;
+  margin: 15px auto;
+}
+
+.item-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 2px dashed darkcyan;
+  border-radius: 12px;
+  padding: 10px 10px;
+}
+
+.item-text {
+  font-size: 24px;
+  font-weight: 500;
+  width: 50vw;
+  height: auto;
+  text-align: left;
+  margin: auto;
+}
+
+.action-buttons {
+  width: 30vw;
+  height: auto;
+  padding: 10px 20px;
+}
+
+#edit {
+  display: none;
+}
+
+.no-tasks {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+input[type="button"] {
+  font-size: 16px;
+  font-weight: 500;
+  background-color: rgba(46, 104, 133, 0.2);
+  border: none;
+  border-radius: 12px;
+  padding: 3px 10px;
+  margin: 0px 5px;
+}
+
+input[type="button"]:hover {
+  background-color: rgba(46, 104, 133, 0.5);
+  cursor: pointer;
+}
