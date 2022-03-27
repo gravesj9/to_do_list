@@ -18,7 +18,8 @@ const submitButton = document.getElementById('submit-task');
 const resetButton = document.querySelector('#reset');
 const deleteButton = document.getElementById('delete');
 const editButton = document.getElementById('edit');
-const completeTask = document.getElementById('div.item-text');
+// const completeTask = document.getElementById('item-text');
+const completeTask = document.getElementsByClassName('item-text');
 
 /* 
 *  Binding Event Handlers
@@ -43,15 +44,21 @@ resetButton.addEventListener('click', (event) => {
   resetList();
 })
 
+// // Complete item handler
+// if (completeTask) {
+//   for (var elem in completeTask) {
+//     console.log(elem);
+//   }
+//   // completeTask.addEventListener('click', (event) => {
+//   //   console.log('clicked')
+//   //   let item = event.target;
+//   //   toggleComplete(item);
+//   // })
+// }
 
 const focusInput = () => {
   document.getElementById('task-input').focus();
 }
-
-// // Complete item handler
-// completeTask.addEventListener('click', () => {
-//   toggleComplete();
-// })
 
 // Task action handlers
 const actionEventListener = (event) => {
@@ -83,8 +90,6 @@ const setAttributes = (element, attributes) => {
     }
   }
 }
-
-
 
 /*
  * Events | Methods
@@ -133,7 +138,7 @@ const resetList = () => {
 }
 
 const toggleComplete = (item) => {
-  // Code for crossing out completed items
+  item.classList.toggle('completed');
 }
 
 const renderTasks = (taskArray) => {
@@ -183,6 +188,12 @@ const renderTasks = (taskArray) => {
       itemContent.appendChild(actionButtons);
       taskListItem.appendChild(itemContent);
       taskDisplay.appendChild(taskListItem);
+
+      // Complete item handler
+      itemText.addEventListener('click', (event) => {
+        let item = event.target;
+        toggleComplete(item);
+      })
     }
   }
 }

@@ -75,14 +75,17 @@ hr {
 .item-text {
   font-size: 24px;
   font-weight: 500;
-  width: 50vw;
+  width: 100%;
   height: auto;
   text-align: left;
   margin: auto;
+  padding: 0 0 0 20px;
 }
 
 .action-buttons {
-  width: 30vw;
+  display: flex;
+  flex-direction: row;
+  width: max-content;
   height: auto;
   padding: 10px 20px;
 }
@@ -94,6 +97,10 @@ hr {
 .no-tasks {
   font-size: 24px;
   font-weight: 500;
+}
+
+.completed {
+  text-decoration: line-through;
 }
 
 input[type="button"] {
